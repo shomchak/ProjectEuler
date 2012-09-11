@@ -1,6 +1,5 @@
 # an analytical approach
 
-
 num3s = 1000/3
 num5s = 999/5
 num15s= 1000/15
