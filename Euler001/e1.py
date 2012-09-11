@@ -1,3 +1,5 @@
+# an iterative approach
+
 i, j, k = 1, 1, 1
 sum3 = 0
 sum5 = 0
