@@ -1,7 +1,7 @@
 # Starting with our list of primes (currently [2,3]), the algorithm will go sequentially 
 # through the list and try dividing theNumber by each element of the list. If an element divides evenly, 
 # that number is added to our list of prime factors, and the algorithm keeps dividing by that element until
-# it no longer divides, at which point it moves on to the next highest prime in out list (if it does not 
+# it no longer divides, at which point it moves on to the next highest prime in our list (if it does not 
 # divide evenly, the algorithm also moves on the to the next prime). If we are at the end of the list, we 
 # call the findNextPrime function to add the next highest prime to our list of primes, and the algorithm 
 # continues. Each time theNumber is successfully divided, we redefine theNumber as the quotient of that division,
@@ -15,11 +15,11 @@ def isPrime(n,primes):  ## tests the primality of a number "n"...
 			return False
 	return True
 
-def findNextPrime(newPrime,primes):   ## finds the next prime given a starting guess "n" and...
+def findNextPrime(newPrime,primes):   ## finds the next prime given a starting guess "newPrime" and...
 	if(isPrime(newPrime, primes)):	  ## ...a list of currently known primes
 		return newPrime
 	else:
-		return findNextPrime((newPrime+2),primes) ## recursion (the function calls itself)
+		return findNextPrime((newPrime+2),primes) 
 
 def main():
 	theNumber = 600851475143 
