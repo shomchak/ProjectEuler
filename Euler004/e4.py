@@ -9,7 +9,7 @@ def main():
     max = 0
     for m in range(100, 1000):
         for n in range(m, 1000):
-            if isPalindrome(m*n):
+            if str(n) == str(n)[::-1]: 
                 if m*n > max:
                     max = m*n
     print max
