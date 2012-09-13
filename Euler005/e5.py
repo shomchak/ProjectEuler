@@ -1,3 +1,7 @@
+# A straight forward prime factorization approach. First find the prime 
+# factorizations of each number 1-20. Then take the union of all the 
+# factorizations and then multiply out the union to get the number.
+
 import math
 
 def divideOut(N,p,times):
