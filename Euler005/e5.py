@@ -3,6 +3,7 @@
 # factorizations and then multiply out the union to get the number.
 
 import math
+import sieveOfEratosthenes
 
 def divideOut(N,p,times):
     if N%p == 0:
@@ -19,7 +20,7 @@ def factors(n,primes):
     
 def main():
     num = 20
-    primes = [2,3,5,7,11,13,17,19]
+    primes = sieveOfEratosthenes.getPrimes(num)
     primefactors = map(factors,range(2,num+1),[primes]*(num-1))
     minfactors = {}
     for p in primes:
