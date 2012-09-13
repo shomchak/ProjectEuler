@@ -1,4 +1,5 @@
-# an analytical approach
+# an analytical approach, using the fact that
+# the sum of the sequence 1 to N = N(N+1)/2
 
 num3s = 1000/3
 num5s = 999/5
