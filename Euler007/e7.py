@@ -1,8 +1,6 @@
 import math
 
 def isPrime(n):
-    if(not n%2):
-        return 0
     sqn = int(math.ceil(math.sqrt(n)))
     for i in range(3,sqn+1,2):
         if(not n%i):
