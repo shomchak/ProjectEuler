@@ -13,7 +13,7 @@ import math
 import sieveOfEratosthenes
 
 limit = 20
-primes = sieveOfEratosthenes.getPrimes(limit)
+primes = list(sieveOfEratosthenes.getPrimes(limit))
 product = 1
 for p in primes:
     count = 1
