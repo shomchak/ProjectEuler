@@ -20,7 +20,7 @@ def factors(n,primes):
     
 def main():
     num = 20
-    primes = sieveOfEratosthenes.getPrimes(num)
+    primes = list(sieveOfEratosthenes.getPrimes(num))
     primefactors = map(factors,range(2,num+1),[primes]*(num-1))
     minfactors = {}
     for p in primes:
