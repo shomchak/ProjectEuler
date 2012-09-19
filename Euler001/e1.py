@@ -1,5 +1,9 @@
 # an iterative approach
 
+import time
+
+start = time.time()
+
 i, j, k = 1, 1, 1
 sum3 = 0
 sum5 = 0
@@ -17,3 +21,5 @@ while k <= 70:
         sum15 = 15 * k + sum15
     k = k + 1
 print sum3  + sum5 - sum15
+
+print time.time()-start
