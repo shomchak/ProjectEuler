@@ -27,7 +27,6 @@ def getFitForN(N):
             row.append(pow(i, j))
         a.append(row)
     a = na(a)
-    print a
     b = na([sequence(i) for i in range(1, N + 1)])
     coeffs = solve(a, b)
     fit = pv(coeffs, N + 1)
