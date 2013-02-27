@@ -4,18 +4,18 @@ from numpy.linalg import solve
 
 
 def sequence(n):
-    result = 0
-    result += 1
-    result -= n
-    result += pow(n, 2)
-    result -= pow(n, 3)
-    result += pow(n, 4)
-    result -= pow(n, 5)
-    result += pow(n, 6)
-    result -= pow(n, 7)
-    result += pow(n, 8)
-    result -= pow(n, 9)
-    result += pow(n, 10)
+    result = (0 +
+              1 -
+              n +
+              pow(n, 2) -
+              pow(n, 3) +
+              pow(n, 4) -
+              pow(n, 5) +
+              pow(n, 6) -
+              pow(n, 7) +
+              pow(n, 8) -
+              pow(n, 9) +
+              pow(n, 10))
     return result
 
 
