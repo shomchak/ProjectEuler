@@ -2,10 +2,10 @@ module Euler3 where
 
 solve :: Integer
 solve = solveIter the_number factors
-    where the_number = 600851475143
-          lt_root p = fromIntegral p <= (sqrt $ fromIntegral the_number)
+    where the_number  = 600851475143
+          lt_root p   = fromIntegral p <= (sqrt $ fromIntegral the_number)
           to_consider = takeWhile lt_root primes
-          factors = filter (divides the_number) to_consider
+          factors     = filter (divides the_number) to_consider
 
 solveIter :: Integer -> [Integer] -> Integer
 solveIter n [] = n
