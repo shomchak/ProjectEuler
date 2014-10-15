@@ -12,10 +12,12 @@ main = do args <- getArgs
 solve :: Integer -> Integer
 solve n = minMultiple [1..n]
 
+-- | The minumum integer that is a multiple of every integer in the list.
 minMultiple :: [Integer] -> Integer
 minMultiple xs = foldr (*) 1 $ foldr join [] $ map primeFactors xs
 
-join :: (Ord a) => [a] -> [a] -> [a]
+-- | Like union, but keeps duplicates from whichever list has more duplicates.
+join :: Eq a => [a] -> [a] -> [a]
 join xs ys = nub (xs ++ ys) >>= longer xs ys
              where longer a b n = maximumBy (compare `on` length)
                                         (map (filter (==n)) [a, b])
