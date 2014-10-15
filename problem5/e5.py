@@ -41,6 +41,6 @@ def solve(num):
 
 
 if __name__ == '__main__':
-    num = 20
+    num = 2000
     product = solve(num)
     print int(product)
