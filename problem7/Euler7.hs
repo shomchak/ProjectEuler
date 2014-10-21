@@ -1,6 +1,6 @@
-module Main where
+module Euler7 where
 
-main = print $ show $ primes !! n where n = 10001
+solve = print $ show $ primes !! n where n = 10001
 
 -- | A list of all primes.
 primes :: [Integer]
