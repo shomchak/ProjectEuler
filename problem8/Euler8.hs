@@ -2,6 +2,7 @@ module Euler8 where
 import Data.List (foldl')
 import Data.Functor ((<$>))
 
+solve :: IO Int
 solve = foldl' max 0 <$> products <$> ns
   where ns = map (read . (:[])) . head . lines
           <$> readFile "e8input.txt" :: IO [Int]
