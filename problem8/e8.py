@@ -1,12 +1,16 @@
-dataFile = open('e8input.txt')
-data = dataFile.readline()
+def max_product(numstr):
+    maximum = 0
+    for n in range(len(numstr)-4):
+    	product = 1
+    	for i in range(5):
+    		product = product*(int(numstr[i+n]))
+    	if product > maximum:
+    		maximum = product
+    return maximum
 
-max = 0
-for n in range(len(data)-4):
-	product = 1
-	for i in range(5):
-		product = product*(ord(data[n+i])-48)
-	if (product > max):
-		max = product
 
-print max
+if __name__ == '__main__':
+    with open('e8input.txt') as f:
+        numstr = f.readline()
+
+    print max_product(numstr)
