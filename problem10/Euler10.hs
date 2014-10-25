@@ -1,7 +1,5 @@
-module Main where
+module Euler10 where
 import PrimeSieve (primes)
-
-main = print $ show solve
 
 solve :: Integer
 solve = sum $ primes 2000000
