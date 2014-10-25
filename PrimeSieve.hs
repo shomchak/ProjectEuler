@@ -1,4 +1,4 @@
-module Main where
+module PrimeSieve (primes) where
 import Data.List (foldl')
 import System.Environment (getArgs)
 import qualified Data.Map.Strict as M
@@ -9,6 +9,7 @@ main = getArgs >>= print . show . head . primes . read . (flip (!!)) 0
 type CompositeMap a = (M.Map a [a])
 data GenState a = GenState (CompositeMap a) [a]
 
+-- | Return all primes below a limit.
 primes :: Integral a => a -> [a]
 primes n = ps
   where (GenState _ ps) = foldl' step (GenState M.empty []) [2..n]
